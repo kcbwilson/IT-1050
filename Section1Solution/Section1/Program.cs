@@ -40,8 +40,10 @@
             System.Console.Write("Are you a citizen? (please enter true or false) ");
             isCitizen = bool.Parse(System.Console.ReadLine());
 
-            System.Console.Write("Can you vote? (please enter true or false) ");
-            canVote = bool.Parse(System.Console.ReadLine());
+            //System.Console.Write("Can you vote? (please enter true or false) ");
+            canVote = age >= 18;
+            canVote = canVote == isCitizen;
+
 
             System.Console.WriteLine("Full name: " + fullName);
             System.Console.WriteLine("Height in CM: " + totalHeightCM);
