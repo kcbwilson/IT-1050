@@ -40,9 +40,7 @@
             System.Console.Write("Are you a citizen? (please enter true or false) ");
             isCitizen = bool.Parse(System.Console.ReadLine());
 
-            canVote = age >= 18;
-            canVote = canVote == isCitizen;
-
+            canVote = isCitizen && age >= 18;
 
             System.Console.WriteLine("Full name: " + fullName);
             System.Console.WriteLine("Height in CM: " + totalHeightCM);
