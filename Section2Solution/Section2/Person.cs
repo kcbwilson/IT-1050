@@ -6,20 +6,20 @@
         public string FirstName;
         public string LastName;
         public Person Spouse;
-        public bool IsMarried()
-        {
-            return Spouse != null;
-        }
+        //public bool IsMarried()
+        //{
+            //return Spouse != null;
+        //}
         static double AverageAge;
 
-        public string GetFullName()
-        {
+        //public string GetFullName()
+        //{
 
-        }
+        //}
 
-        void PrintNameAndAge()
-        {
+        //void PrintNameAndAge()
+        //{
 
-        }
+        //}
     }
 }

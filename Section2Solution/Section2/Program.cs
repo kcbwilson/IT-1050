@@ -20,7 +20,10 @@
                 System.Console.Write("Spouse's Age: ");
                 person1.Spouse.Age = int.Parse(System.Console.ReadLine());
             }
-          
+
+            System.Console.WriteLine(person1.Spouse.FirstName);
+            System.Console.WriteLine("Press Enter");
+            System.Console.ReadLine();
 
             //Person person2 = new Person();
             //person2.FirstName = "Temp2";
