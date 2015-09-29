@@ -6,7 +6,7 @@
         {
             Person P1 = new Person();
             P1.GetInfo();
-            
+                        
             Person P2 = new Person(); ;
             P2.GetInfo();
             
