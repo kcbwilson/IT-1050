@@ -6,12 +6,25 @@
         public string LastName;
         public int Age;
         public Person Spouse;
-        public string SpouseFirstName;
-        public string SpouseLastName;
-        public int SpouseAge;
-        int TotalAge = 0;
-        int PersonCount = 0;
-        int AverageAge = 0;
+
+        public static int TotalAge;
+        public static int PersonCount;
+
+        public static double AverageAge()
+        {
+            return (double)Person.TotalAge / Person.PersonCount;
+        }
+
+        public string GetFullName()
+        {
+            return this.FirstName + " " + this.LastName;
+        }
+
+        public void PrintNameAndAge()
+        {
+            System.Console.WriteLine("Full Name: " + this.GetFullName());
+            System.Console.WriteLine("Age      : " + this.Age);
+        }
 
         public bool IsMarried()
         {
@@ -23,52 +36,32 @@
         {
             System.Console.Write("What is your first name: ");
             FirstName = System.Console.ReadLine();
-            System.Console.Write("What is your last name: ");
+            System.Console.Write("What is your last name : ");
             LastName = System.Console.ReadLine();
-            System.Console.Write("What is your age: ");
+            System.Console.Write("What is your age       : ");
             Age = int.Parse(System.Console.ReadLine());
+            Person.PersonCount++;
+            Person.TotalAge += this.Age;
+        }
+
+        public void CreateSpouseIfMarried()
+        {
             System.Console.Write("Are you married? (yes/no) ");
             if (System.Console.ReadLine().ToLower().StartsWith("y"))
             {
-                Spouse = new Person();
-                System.Console.WriteLine("What is your spouse's first name? ");
-                Spouse.SpouseFirstName = System.Console.ReadLine();
-                System.Console.WriteLine("What is your spouse's last name? ");
-                Spouse.SpouseLastName = System.Console.ReadLine();
-                System.Console.WriteLine("What is your spouse's age? ");
-                Spouse.SpouseAge = int.Parse(System.Console.ReadLine());
+                this.Spouse = new Person();
+                System.Console.WriteLine("Please Enter your spouse's information");
+                this.Spouse.GetInfo();
+                this.Spouse.Spouse = this;
+
             }
-         }
-
-
-        public string GetFullName()
-        {
-            string FullName = "";
-            FullName += this.FirstName;
-            FullName += " ";
-            FullName += this.LastName;
-            return FullName;
-        }
-
-
-        public string GetSpouseFullName()
-        {
-            string SpouseFullName = " ";
-            SpouseFullName += this.SpouseFirstName;
-            SpouseFullName += " ";
-            SpouseFullName += this.SpouseLastName;
-            return SpouseFullName;
-        }
-        public void CalcAge()
-        {
-            AverageAge = TotalAge / PersonCount;
-        }
-
-
-        public void FullSpouseNameAndAge()
-        {
-            System.Console.WriteLine("My Spouse's name is " + this.GetSpouseFullName());
-            System.Console.WriteLine("My Spouse's age is " + this.SpouseAge);
+            else
+            {
+                this.Spouse = new Person();
+                this.Spouse.FirstName = "Not ";
+                this.Spouse.LastName = "Married";
+                this.Spouse.Age = 0;
+            }
         }
 
 
