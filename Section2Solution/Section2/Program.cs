@@ -17,11 +17,11 @@
             P3.CreateSpouseIfMarried();
 
             P1.PrintNameAndAge();
-            P1.Spouse.PrintNameAndAge();
+           
             P2.PrintNameAndAge();
-            P2.Spouse.PrintNameAndAge();
+            
             P3.PrintNameAndAge();
-            P3.Spouse.PrintNameAndAge();
+            
 
 
             System.Console.WriteLine("The average age is " + Person.AverageAge());

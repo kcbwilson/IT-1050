@@ -22,8 +22,13 @@
 
         public void PrintNameAndAge()
         {
-            System.Console.WriteLine("Full Name: " + this.GetFullName());
-            System.Console.WriteLine("Age      : " + this.Age);
+            System.Console.WriteLine("Full Name   : " + this.GetFullName());
+            System.Console.WriteLine("Age         : " + this.Age);
+            if (this.Spouse.Age > 0)
+            {
+            System.Console.WriteLine("Married to  : " + this.Spouse.FirstName + " " + this.Spouse.LastName);
+            System.Console.WriteLine("Their age is: " + this.Spouse.Age);
+            }
         }
 
         public bool IsMarried()
@@ -58,8 +63,6 @@
             else
             {
                 this.Spouse = new Person();
-                this.Spouse.FirstName = "Not ";
-                this.Spouse.LastName = "Married";
                 this.Spouse.Age = 0;
             }
         }
