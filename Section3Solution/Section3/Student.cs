@@ -6,15 +6,23 @@
         private int Grade;
         private Instructor Teacher;
 
-        public Student(string name, int grade)
+        public Student(string name, Instructor teacher)
         {
             this.Name = name;
-            this.Grade = grade;
+            this.Teacher = teacher;
+            this.SetGrade();
         }
 
-        public void SetGrade(int grade)
+        public void SetGrade()
         {
             this.Grade = 0;
+        }
+
+        public void Print()
+        {
+            System.Console.WriteLine("Student name  : " + this.Name);
+            System.Console.WriteLine("Teacher's name: " + this.Teacher);
+
         }
     }
 }

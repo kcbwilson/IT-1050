@@ -3,7 +3,7 @@
     class Instructor
     {
         private string Name;
-        //private string LastName;
+        
         private string CourseName;
 
         public Instructor(string name, string courseName)
