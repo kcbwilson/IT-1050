@@ -11,7 +11,7 @@
             this.Name = name;
             this.CourseName = courseName;
         }
-
+        
         public void SetStudentGrade(Student name, Student grade)
         {
                         
