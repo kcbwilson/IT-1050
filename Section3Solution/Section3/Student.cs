@@ -23,7 +23,7 @@
             System.Console.WriteLine("Student name  : " + this.Name);
             this.Teacher.Print();
             System.Console.WriteLine("Grade         : " + this.Grade);
-            System.Console.WriteLine("   ");
+            System.Console.WriteLine(" ");
         }
     }
 }

@@ -22,7 +22,7 @@
             I2.SetStudentGrade(S4, 92);
 
             System.Console.WriteLine("    Student Information    ");
-            System.Console.WriteLine("        ");
+            System.Console.WriteLine(" ");
             S1.Print();
             S2.Print();
             S3.Print();
