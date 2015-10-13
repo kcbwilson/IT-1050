@@ -16,6 +16,11 @@
 
             Student S4 = new Student("Matt", I2);
 
+            I1.SetStudentGrade(S1, 95);
+            I1.SetStudentGrade(S2, 85);
+            I2.SetStudentGrade(S3, 90);
+            I2.SetStudentGrade(S4, 92);
+
             System.Console.WriteLine("    Teacher Information    ");
             System.Console.WriteLine("        ");
             I1.Print();

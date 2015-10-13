@@ -10,12 +10,12 @@
         {
             this.Name = name;
             this.Teacher = teacher;
-            this.SetGrade();
+            this.Grade = 0;
         }
 
-        public void SetGrade()
+        public void SetGrade(int grade)
         {
-            this.Grade = 0;
+            this.Grade = grade;
         }
 
         public void Print()
