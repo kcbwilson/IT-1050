@@ -22,6 +22,7 @@
         {
             System.Console.WriteLine("Student name  : " + this.Name);
             System.Console.WriteLine("Teacher's name: " + this.Teacher.Name);
+            System.Console.WriteLine("Course name   : " + this.Teacher.CourseName);
             System.Console.WriteLine("Grade         : " + this.Grade);
             System.Console.WriteLine("   ");
         }

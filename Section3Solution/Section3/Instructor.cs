@@ -4,7 +4,7 @@
     {
         public string Name;
         
-        private string CourseName;
+        public string CourseName;
 
         public Instructor(string name, string courseName)
         {
