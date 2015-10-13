@@ -17,10 +17,14 @@
             Student S4 = new Student("Matt", I2);
 
             System.Console.WriteLine("    Teacher Information    ");
+            System.Console.WriteLine("        ");
             I1.Print();
+            System.Console.WriteLine("        ");
             I2.Print();
 
+            System.Console.WriteLine("        ");
             System.Console.WriteLine("    Student Information    ");
+            System.Console.WriteLine("        ");
             S1.Print();
             S2.Print();
             S3.Print();
