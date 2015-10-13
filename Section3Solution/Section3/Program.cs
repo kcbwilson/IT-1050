@@ -21,13 +21,6 @@
             I2.SetStudentGrade(S3, 90);
             I2.SetStudentGrade(S4, 92);
 
-            System.Console.WriteLine("    Teacher Information    ");
-            System.Console.WriteLine("        ");
-            I1.Print();
-            System.Console.WriteLine("        ");
-            I2.Print();
-
-            System.Console.WriteLine("        ");
             System.Console.WriteLine("    Student Information    ");
             System.Console.WriteLine("        ");
             S1.Print();
