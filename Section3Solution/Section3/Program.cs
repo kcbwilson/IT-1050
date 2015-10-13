@@ -16,7 +16,15 @@
 
             Student S4 = new Student("Matt", I2);
 
+            System.Console.WriteLine("    Teacher Information    ");
+            I1.Print();
+            I2.Print();
+
+            System.Console.WriteLine("    Student Information    ");
             S1.Print();
+            S2.Print();
+            S3.Print();
+            S4.Print();
             System.Console.ReadKey();
         }
     }
