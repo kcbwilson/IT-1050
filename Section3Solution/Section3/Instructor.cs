@@ -12,9 +12,9 @@
             this.CourseName = courseName;
         }
 
-        public void SetStudentGrade(Student name, int grade)
+        public void SetStudentGrade(Student student, int grade)
         {
-            name.SetGrade(grade);
+            student.SetGrade(grade);
         }
 
         public void Print()

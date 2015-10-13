@@ -4,29 +4,29 @@
     {
         static void Main(string[] args)
         {
-            Instructor I1 = new Instructor("John", "English");
+            Instructor EnglishInstructor = new Instructor("John", "English");
 
-            Instructor I2 = new Instructor("Mike", "Math");
+            Instructor MathInstructor = new Instructor("Mike", "Math");
 
-            Student S1 = new Student("Jane", I1);
+            Student Student1 = new Student("Jane", EnglishInstructor);
 
-            Student S2 = new Student("Joe", I1);
+            Student Student2 = new Student("Joe", EnglishInstructor);
 
-            Student S3 = new Student("Melissa", I2);
+            Student Student3 = new Student("Melissa", MathInstructor);
 
-            Student S4 = new Student("Matt", I2);
+            Student Student4 = new Student("Matt", MathInstructor);
 
-            I1.SetStudentGrade(S1, 95);
-            I1.SetStudentGrade(S2, 85);
-            I2.SetStudentGrade(S3, 90);
-            I2.SetStudentGrade(S4, 92);
+            EnglishInstructor.SetStudentGrade(Student1, 95);
+            EnglishInstructor.SetStudentGrade(Student2, 85);
+            MathInstructor.SetStudentGrade(Student3, 90);
+            MathInstructor.SetStudentGrade(Student4, 92);
 
             System.Console.WriteLine("    Student Information    ");
             System.Console.WriteLine(" ");
-            S1.Print();
-            S2.Print();
-            S3.Print();
-            S4.Print();
+            Student1.Print();
+            Student2.Print();
+            Student3.Print();
+            Student4.Print();
             System.Console.ReadKey();
         }
     }
