@@ -4,7 +4,7 @@
     {
         private double TicketPrice;
         private string TicketType;
-        private double TotalTicketPrice;
+        private double ThisTicketPrice;
 
         public Ticket(string ticketType, double ticket)
         {
@@ -20,8 +20,13 @@
         public double Pricing(double ticketQty)
         {
 
-            this.TotalTicketPrice = this.TicketPrice * ticketQty;
-            return this.TotalTicketPrice;
+            this.ThisTicketPrice = this.TicketPrice * ticketQty;
+            return this.ThisTicketPrice;
         }
-    }
+        public double TicketTotals()
+        {
+            return this.ThisTicketPrice;
+        }
+
+        }
 }
