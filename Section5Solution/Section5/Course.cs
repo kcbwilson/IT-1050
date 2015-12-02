@@ -2,26 +2,35 @@
 {
     public class Course
     {
-        public string CourseName;
-        public int CRN;
+        private string CourseName;
+        private int CRN;
         public Student[] Students;
 
-        public void GetStudents()
+        public void GetCourseInfo()
         {
-            for (int i = 0; i < Students.Length; i++)
+            CourseName = Question.AskForString("Please Enter Course Name");
+            CRN = Question.AskForInteger("Please Enter CRN");
+        }
+
+        public void GetClassInfo()
+        {
+            int studentQty;
+            studentQty = Question.AskForInteger("Please Enter Number of Students");
+            Students = new Student[studentQty];
+            for (int i = 0; i < studentQty; i++)
             {
                 Students[i] = new Student();
+                Students[i].GetStudentInfo();
             }
+
+            System.Console.WriteLine("Course Name       : " + CourseName);
+            System.Console.WriteLine("CRN               : " + CRN);
+            System.Console.WriteLine("Number of Students: " + Students.Length);
+
             foreach (Student student in Students)
             {
                 student.Print();
             }
-        }
-
-        public void Print()
-        {
-            System.Console.WriteLine("The name of the course is " + CourseName + ". The CRN is " + CRN + "." 
-            + "There are " + Students.Length + " students in the class");
         }
     }
 }
