@@ -10,7 +10,8 @@
             {
                 Course course = new Course();
                 course.GetCourseInfo();
-                course.GetClassInfo();                
+                course.GetClassInfo();
+                course.PrintInfo();
                 answer = Question.AskForString("Would you like to make any changes? y/n");                                          
             }
 

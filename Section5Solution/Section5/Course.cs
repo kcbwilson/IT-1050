@@ -4,7 +4,7 @@
     {
         private string CourseName;
         private int CRN;
-        public Student[] Students;
+        private Student[] Students;
 
         public void GetCourseInfo()
         {
@@ -14,15 +14,19 @@
 
         public void GetClassInfo()
         {
-            int studentQty;
-            studentQty = Question.AskForInteger("Please Enter Number of Students");
-            Students = new Student[studentQty];
-            for (int i = 0; i < studentQty; i++)
+            int size = Question.AskForInteger("Please Enter Number of Students");
+            Students = new Student[size];
+            for (int i = 0; i < size; i++)
             {
                 Students[i] = new Student();
                 Students[i].GetStudentInfo();
             }
-
+        }
+        public void PrintInfo()
+        {
+            System.Console.WriteLine(" ");
+            System.Console.WriteLine("        Course Information");
+            System.Console.WriteLine(" ");
             System.Console.WriteLine("Course Name       : " + CourseName);
             System.Console.WriteLine("CRN               : " + CRN);
             System.Console.WriteLine("Number of Students: " + Students.Length);
@@ -31,6 +35,7 @@
             {
                 student.Print();
             }
+            System.Console.WriteLine(" ");
         }
     }
 }
